@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose  = require('mongoose')
 const cors = require('cors')
 
-const routes = require('./routes/routes')
+const routes = require('../routes/routes')
 
 //express app
 const app = express()
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use(cors(
     {
-        origin: ['https://floqer-assign-backend.vercel.app/'],
+        origin: ['http://localhost:3000','https://floqer-assign-backend.vercel.app/'],
         methods: ["POST", "GET"],
         credentials: true
     }
