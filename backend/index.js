@@ -16,19 +16,19 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(cors(
+/*app.use(cors(
     {
         origin: ['http://localhost:3000','https://floqer-assign-backend.vercel.app/'],
         methods: ["POST", "GET"],
         credentials: true
     }
-))
+)) */
 
 //routes
 app.use('/api/data', routes)
 
 //Connecting to DB
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         app.listen(process.env.PORT, () => {
             console.log('Connected to DB & Listening on port', process.env.PORT)
