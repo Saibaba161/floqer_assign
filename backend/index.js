@@ -16,13 +16,13 @@ app.use((req, res, next) => {
     next()
 })
 
-/*app.use(cors(
+app.use(cors(
     {
-        origin: ['http://localhost:3000','https://floqer-assign-backend.vercel.app/'],
+        origin: ['http://localhost:3000','https://floqer-assign-frontend.vercel.app/'],
         methods: ["POST", "GET"],
         credentials: true
     }
-)) */
+))
 
 //routes
 app.use('/api/data', routes)
