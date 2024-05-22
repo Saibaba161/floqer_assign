@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose  = require('mongoose')
+//const cors = require('cors')
 
 const routes = require('./routes/routes')
 
@@ -14,6 +15,14 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
+
+/*app.use(cors(
+    {
+        origin: ['https://floqer-assign-backend.vercel.app/'],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+)) */
 
 //routes
 app.use('/api/data', routes)
