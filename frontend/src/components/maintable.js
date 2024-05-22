@@ -9,7 +9,7 @@ const MainTable = () => {
     const [loading, setLoading] = useState(true)
     const [selectedYear, setSelectedYear] = useState(null)
     const [showSecondTable, setShowSecondTable] = useState(false);
-    const [pageSize, setPageSize] = useState(5); // Default page size
+    const [pageSize, setPageSize] = useState(5);
 
     useEffect(() => {
         const fetchData = async () => {

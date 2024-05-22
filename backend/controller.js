@@ -1,4 +1,3 @@
-
 const data = require('./schema')
 
 const getData = async(req, res) => {

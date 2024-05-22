@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    background-color: #f0f8ff; /* Light blue background */
+    background-color: #f0f8ff;
     font-family: Arial, sans-serif;
     color: #333;
 }
@@ -119,15 +119,14 @@ body {
     cursor: pointer;
 }
 
-/* Chart title styling 
+/* Chart title styling */
 .chart-title {
     color: #ffffff;
     text-align: center;
-    font-size: 22px;
+    font-size: 40px;
     margin-top: 40px;
     font-family: 'Roboto';
 }
-*/
 
 /* Chart container styling */
 .chart-container {
@@ -141,7 +140,7 @@ body {
 }
 
 .chart-title {
-    color: #007acc; /* Blue title color */
+    color: #007acc;
     text-align: center;
     margin: 20px 0;
 }
