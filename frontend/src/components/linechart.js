@@ -1,9 +1,7 @@
-
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts"
 
 const LineGraph = ({ data }) => {
     
-
     return (
         <ResponsiveContainer width="100%" height={400}>
             <LineChart data={data}>
