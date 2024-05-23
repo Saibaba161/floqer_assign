@@ -22,7 +22,7 @@ const getData = async(req, res) => {
                 $sort: { year: 1}
             }
         ]);
-
+        res.set('Access-Control-Allow-Origin', '*');
         res.json(aggregatedData)
 
     } catch(error) {
@@ -46,6 +46,7 @@ const getSingleData = async(req, res) => {
             { $project: { job_title: "$_id", job_count: 1, _id: 0 }}
         ])
 
+        res.set('Access-Control-Allow-Origin', '*');
         res.json(jobTitles)
 
     } catch(error) {
