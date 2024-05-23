@@ -46,8 +46,8 @@ const getSingleData = async(req, res) => {
             { $project: { job_title: "$_id", job_count: 1, _id: 0 }}
         ])
 
-        res.set('Access-Control-Allow-Origin', '*');
-        res.headers('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Credentials', 'true')
         res.json(jobTitles)
 
     } catch(error) {
