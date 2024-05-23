@@ -18,7 +18,8 @@ const MainTable = () => {
                 {
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Access-Control-Request-Method': 'GET'
                     },
                 })
                 const result = await response.json()
@@ -45,6 +46,7 @@ const MainTable = () => {
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Credentials': 'true',
+                    'Access-Control-Request-Method': 'POST',
                     'Content-Type': 'application/json'
                 },
             })
