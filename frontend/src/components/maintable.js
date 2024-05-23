@@ -14,7 +14,8 @@ const MainTable = () => {
     useEffect(() => {
         const fetchData = async () => {
             try{
-                const response = await fetch('https://floqer-assign-backend.vercel.app/api/data',{
+                const response = await fetch('https://floqer-assign-backend.vercel.app/api/data', { mode: 'cors'},
+                {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json'
@@ -37,7 +38,8 @@ const MainTable = () => {
     const handleRowClick = async(year) => {
 
         try {
-            const response = await fetch('https://floqer-assign-backend.vercel.app/api/data/:year', {
+            const response = await fetch('https://floqer-assign-backend.vercel.app/api/data/:year', { mode: 'cors'},
+            {
                 method: 'POST',
                 body: JSON.stringify({ year }),
                 headers: {
