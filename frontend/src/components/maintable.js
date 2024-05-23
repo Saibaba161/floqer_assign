@@ -43,6 +43,7 @@ const MainTable = () => {
                 method: 'POST',
                 body: JSON.stringify({ year }),
                 headers: {
+                    'Access-Control-Allow-Origin': '*',
                     'Content-Type': 'application/json'
                 },
             })
