@@ -22,8 +22,7 @@ app.use(cors(
         methods: ["POST", "GET", "OPTIONS"],
         credentials: true,
         allowedHeaders: 'Content-Type:application/json'
-    },
-    next()
+    }
 ))
 
 //routes
