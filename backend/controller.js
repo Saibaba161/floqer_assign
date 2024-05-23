@@ -47,6 +47,7 @@ const getSingleData = async(req, res) => {
         ])
 
         res.set('Access-Control-Allow-Origin', '*');
+        res.headers('Access-Control-Allow-Origin', '*');
         res.json(jobTitles)
 
     } catch(error) {
