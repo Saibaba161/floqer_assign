@@ -4,6 +4,12 @@ const express = require('express')
 const mongoose  = require('mongoose')
 const cors = require('cors')
 
+
+const routes = require('./routes/routes')
+
+//express app
+const app = express()
+
 app.use(cors(
     {
     origin: ['https://floqer-assign-frontend.vercel.app'],
@@ -13,11 +19,6 @@ app.use(cors(
     }
 ))
 
-
-const routes = require('./routes/routes')
-
-//express app
-const app = express()
 
 //middleware
 app.use(express.json())

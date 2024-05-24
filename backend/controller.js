@@ -32,8 +32,7 @@ const getData = async(req, res) => {
 
 const getSingleData = async(req, res) => {
     const { year } = req.body
-    console.log('Received year:', year)
-
+    console.log("Received year:", year)
     const parsedYear = parseInt(year)
 
     if(!parsedYear) {
