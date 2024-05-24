@@ -53,6 +53,8 @@ const MainTable = () => {
 
             const result = await response.json()
 
+            console.log(response)
+            console.log(result)
             setSelectedYear(result)
             setShowSecondTable(true)
         }

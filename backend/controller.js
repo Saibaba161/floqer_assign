@@ -49,7 +49,7 @@ const getSingleData = async(req, res) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Credentials', 'true')
         res.json(jobTitles)
-
+        
     } catch(error) {
         res.status(500).json(error)
     }
