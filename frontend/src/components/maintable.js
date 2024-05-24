@@ -39,7 +39,7 @@ const MainTable = () => {
     const handleRowClick = async(year) => {
 
         try {
-            const response = await fetch('https://floqer-assign-backend.vercel.app/api/data/:year', { mode: 'no-cors'},
+            const response = await fetch('https://floqer-assign-backend.vercel.app/api/data/:year', { mode: 'cors'},
             {
                 method: 'POST',
                 body: JSON.stringify({ year }),
