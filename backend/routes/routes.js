@@ -9,6 +9,6 @@ const { getData, getSingleData } = require('../controller')
 
 router.get('/', getData)
 
-router.post('/', getSingleData)
+router.post('/year', getSingleData)
 
 module.exports = router
