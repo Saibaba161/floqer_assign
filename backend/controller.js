@@ -23,7 +23,7 @@ const getData = async(req, res) => {
             }
         ]);
         res.set('Access-Control-Allow-Origin', '*');
-        res.json(aggregatedData)
+        res.status(200).json(aggregatedData)
 
     } catch(error) {
         res.status(500).json(error)
@@ -46,10 +46,9 @@ const getSingleData = async(req, res) => {
             { $project: { job_title: "$_id", job_count: 1, _id: 0 }}
         ])
 
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        res.setHeader('Access-Control-Allow-Credentials', 'true')
-        res.json(jobTitles)
-        
+        res.set('Access-Control-Allow-Origin', '*');
+        res.status(200).json(jobTitles)
+
     } catch(error) {
         res.status(500).json(error)
     }
