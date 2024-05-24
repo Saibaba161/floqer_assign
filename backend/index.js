@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.use(corsOptions)
 
 corsOptions = {
-    origin: 'https://floqer-assign-frontend.vercel.app/',
+    origin: ['https://floqer-assign-frontend.vercel.app/','https://floqer-assign-backend.vercel.app/api/data/:year'],
     methods: ['POST', 'GET', 'OPTIONS'],
     credentials: true,
     allowedHeaders: 'Content-Type:application/json'
