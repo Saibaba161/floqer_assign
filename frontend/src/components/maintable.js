@@ -47,7 +47,8 @@ const MainTable = () => {
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Credentials': 'true',
                     'Access-Control-Request-Method': 'POST',
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': "application/json"
                 },
             })
 
