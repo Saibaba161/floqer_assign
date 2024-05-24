@@ -32,11 +32,12 @@ const getData = async(req, res) => {
 
 const getSingleData = async(req, res) => {
     const { year } = req.body
+    console.log('Received year:', year)
 
     const parsedYear = parseInt(year)
 
     if(!parsedYear) {
-        return res.json(400).json("Year not found")
+        return res.status(400).json("Year not found")
     }
 
     try {

@@ -4,6 +4,16 @@ const express = require('express')
 const mongoose  = require('mongoose')
 const cors = require('cors')
 
+app.use(cors(
+    {
+    origin: ['https://floqer-assign-frontend.vercel.app'],
+    methods: ['POST', 'GET', 'OPTIONS'],
+    credentials: true,
+    allowedHeaders: ['Content-Type']
+    }
+))
+
+
 const routes = require('./routes/routes')
 
 //express app
@@ -16,14 +26,6 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use(cors(
-    {
-    origin: ['https://floqer-assign-frontend.vercel.app'],
-    methods: ['POST', 'GET', 'OPTIONS'],
-    credentials: true,
-    allowedHeaders: ['Content-Type']
-    }
-))
 
 //routes
 app.use('/api/data', routes)
