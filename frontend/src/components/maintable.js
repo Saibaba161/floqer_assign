@@ -39,11 +39,18 @@ const MainTable = () => {
     const handleRowClick = async(year) => {
 
         try {
-            const response = await fetch(`/api/data/${year}`, { mode: 'cors'})
+            const response = await fetch(`/api/data/${year}`, { mode: 'cors'},
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Request-Method': 'GET'
+                },
+            })
 
             const result = await response.json()
 
-            if(!response.ok) {
+            if(!response.ok || !result.ok) {
                 throw new Error("Failed to fetch data")
             }
 
