@@ -39,16 +39,7 @@ const MainTable = () => {
     const handleRowClick = async(year) => {
 
         try {
-            const response = await fetch(`/api/data/${year}`, { mode: 'cors'},
-            {
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Credentials': 'true',
-                    'Access-Control-Request-Method': 'POST',
-                    'Content-Type': 'application/json',
-                    Accept: "application/json"
-                },
-            })
+            const response = await fetch(`/api/data/${year}`, { mode: 'cors'})
 
             const result = await response.json()
 
