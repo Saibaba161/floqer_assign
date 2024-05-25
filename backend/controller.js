@@ -32,15 +32,15 @@ const getData = async(req, res) => {
 
 const getSingleData = async(req, res, year) => {
     
-    const parsedYear = parseInt(year)
+    
 
-    if(!parsedYear) {
+    if(!year) {
         return res.status(400).json("Year not found")
     }
 
     try {
         const jobTitles = await data.aggregate([
-            { $match: { work_year: parsedYear } },
+            { $match: { work_year: year } },
             { $group: { _id: "$job_title", job_count: { $sum : 1}}},
             { $project: { job_title: "$_id", job_count: 1, _id: 0 }}
         ])
